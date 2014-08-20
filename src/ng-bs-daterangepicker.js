@@ -16,8 +16,8 @@ angular.module('ngBootstrap', []).directive('input', function ($compile, $parse)
 			var options = {};
 			options.format = $attributes.format || 'YYYY-MM-DD';
 			options.separator = $attributes.separator || ' - ';
-			options.minDate = $attributes.minDate && moment($attributes.minDate);
-			options.maxDate = $attributes.maxDate && moment($attributes.maxDate);
+			options.minDate = $attributes.mindate && moment($attributes.mindate);
+			options.maxDate = $attributes.maxdate && moment($attributes.maxdate);
 			options.dateLimit = $attributes.limit && moment.duration.apply(this, $attributes.limit.split(' ').map(function (elem, index) { return index === 0 && parseInt(elem, 10) || elem; }) );
 			options.ranges = $attributes.ranges && $parse($attributes.ranges)($scope);
 			options.locale = $attributes.locale && $parse($attributes.locale)($scope);
