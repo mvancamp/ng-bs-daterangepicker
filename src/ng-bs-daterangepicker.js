@@ -22,6 +22,9 @@ angular.module('ngBootstrap', []).directive('input', function ($compile, $parse)
 			options.ranges = $attributes.ranges && $parse($attributes.ranges)($scope);
 			options.locale = $attributes.locale && $parse($attributes.locale)($scope);
 			options.opens = $attributes.opens && $parse($attributes.opens)($scope);
+			options.singleDatePicker = $attributes.singledatepicker && $parse($attributes.singledatepicker)($scope);
+			options.showDropdowns = $attributes.showdropdowns && $parse($attributes.showdropdowns)($scope);
+			options.showWeekNumbers = $attributes.showweeknumbers && $parse($attributes.showweeknumbers)($scope);
 
 			function format(date) {
 				return date.format(options.format);
